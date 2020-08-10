@@ -1,0 +1,27 @@
+//Insertion Sort
+#include <stdio.h>
+#include<stdlib.h>
+int main() 
+{
+    int values[5];int i,j,tmp;
+    printf("Enter 5 integers: ");
+    for(i = 0; i < 5; ++i) 
+        scanf("%d", &values[i]);
+    for(i=1;i<5;i++)
+    {
+        j=i;tmp=values[i];
+        while(j>0&&values[j-1]>tmp){values[j]=values[j-1];j=j-1;}
+        values[j]=tmp;
+    }
+    printf("\nInsertion sorted array.....");
+    for(i = 0; i < 5; ++i) 
+        printf("%d",values[i]);
+    return(0);    
+}    
+
+//Output-
+//Enter 5 integers: 5
+//4
+//3
+
+//Insertion sorted array.....345
